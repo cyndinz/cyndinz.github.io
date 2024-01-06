@@ -1,0 +1,58 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  color: #333;
+  font-size: 2em;
+}
+
+header p {
+  color: #666;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+.project {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
