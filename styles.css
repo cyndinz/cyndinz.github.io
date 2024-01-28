@@ -7,6 +7,8 @@ body, h1, h2, h3, p, ul {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  background: url('galaxy_background.jpg'); /* Replace 'galaxy_background.jpg' with the actual path to your galaxy background image */
+  background-size: cover;
 }
 
 header {
