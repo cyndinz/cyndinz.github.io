@@ -62,12 +62,17 @@ ul {
 
 .project {
   background-color: #f9f9f9;
-  padding: 5px;
-  margin-bottom: 30px;
+  padding: 20px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-height: 300px; /* Set the desired height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px; /* Optional: Add padding for spacing */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent background */
+  border: 1px solid #ccc; /* Optional: Add a border for visual distinction */
 }
 
 footer {
