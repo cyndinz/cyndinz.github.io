@@ -64,7 +64,6 @@ ul {
   background-color: #f9f9f9;
   padding: 5px;
   margin-bottom: 15px;
-  display: flex;
   align-items: center; /* Vertical centering */
 }
 
