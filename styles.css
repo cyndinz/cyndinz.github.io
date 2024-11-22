@@ -66,8 +66,6 @@ ul {
   margin-bottom: 15px;
   display: flex;
   align-items: center; /* Vertical centering */
-  justify-content: left; /* Horizontal centering (optional) */
-  text-align: center; /* Ensures multiline text is centered */
 }
 
 footer {
