@@ -62,9 +62,10 @@ ul {
 
 .project {
   background-color: #f9f9f9;
-  padding: 5px;
+  padding: 3px;
   margin-bottom: 15px;
-  align-items: center; /* Vertical centering */
+  display: flex;
+  align-items: center; 
 }
 
 footer {
