@@ -7,7 +7,7 @@ body, h1, h2, h3, p, ul {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background: url('hubble.jpg'); /* Replace '' with the actual path to your galaxy background image */
+  background: url('hubble.jpg'); 
   background-size: cover;
 }
 
@@ -86,7 +86,7 @@ ul {
 }
 
 #returnToTop:hover {
-  background-color: #555;
+  background-color: rgba(51, 51, 51, 0.7);
 }
 
 footer {
