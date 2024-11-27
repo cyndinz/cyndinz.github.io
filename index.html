@@ -91,5 +91,27 @@
   <div class="image-container">
     <img src="rick-and-morty.png" alt="Rick and Morty">
   </div>
+
+  <!-- Return to Top Button -->
+  <button id="returnToTop" onclick="scrollToTop()">⬆ Return to Top</button>
+
+  <script>
+    // Show the button when scrolled down 100px
+    window.onscroll = function() {
+      const button = document.getElementById("returnToTop");
+      if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
+        button.style.display = "block";
+      } else {
+        button.style.display = "none";
+      }
+    };
+
+    // Scroll to top smoothly
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+
+
 </body>
 </html>
