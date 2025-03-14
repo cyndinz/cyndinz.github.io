@@ -26,6 +26,33 @@ header p {
   color: #666;
 }
 
+/* Navigation Bar */
+nav {
+  background: #555;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
 main {
   max-width: 800px;
   margin: 20px auto;
@@ -111,4 +138,48 @@ footer {
 footer a {
   color: #fff;
   text-decoration: none;
+}
+
+/* Message Page Styling */
+.message-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.message-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.message-container h1 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.message-container p {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.message-container button {
+  padding: 10px 20px;
+  border: none;
+  background: #ff6f61;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.message-container button:hover {
+  background: #e54e42;
 }
