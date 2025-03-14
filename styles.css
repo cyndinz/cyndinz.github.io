@@ -109,6 +109,19 @@ ul {
   height: auto;
 }
 
+.wisdom {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.wisdom-block {
+  background-color: rgba(249, 249, 249, 0.7); 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 #returnToTop {
   position: fixed;
   bottom: 20px; 
