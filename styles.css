@@ -77,17 +77,8 @@ ul {
   list-style: none;
 }
 
-.gaafree {
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
-  color: #f9f9f9; /* Light text color */
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 600px;
-  margin: 20px auto;
-}
 
-
-.about, .skills {
+.gaafree, .about, .skills {
   color: #f9f9f9;
 }
 
