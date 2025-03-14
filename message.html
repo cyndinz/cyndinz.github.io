@@ -2,34 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Message - Gaafree</title>
+  <title>Wisdom</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="message-page">
+<body>
   <header>
     <h1>Cyndi</h1>
     <p>CodeWhizmo</p>
   </header>
-  
-  <!-- Navigation Bar -->
+
+    <!-- Navigation Bar -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="#" class="active">Message</a></li>
+      <li><a href="#" class="active">Wisdom</a></li>
     </ul>
   </nav>
 
-  <div class="message-container">
-    <h1>Leave a Message</h1>
-    <p>Drop me a message and I'll get back to you soon!</p>
-    <button onclick="goBack()">Go Back</button>
+  <main>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>Thanks for stumbling upon my not-so-serious profile. I'm all about whipping up stuffs. I believe in the quantum world information cannot be created nor destroyed. The energy of universe must remain constant. Hence a new idea of Gaafree germinated in my mind. If you're curious, stick around! Alternatively, you can watch my favourite anime Rick and Morty :)</p>
+    </section>
+
+    <section class="skills">
+      <h2>No Skills</h2>
+      <ul>
+        <li>Coffee Brewing Maestro</li>
+        <li>Master of Book Procurement</li>
+        <li>Spare-time Optimization Specialist</li>
+        <li>Professional Emoji Communicator</li>
+        <!-- Add more skills here -->
+      </ul>
+    </section>
+
+    <section class="projects">
+      <h2>Reading Projects</h2>
+
+      <div class="project">
+        <h3>Irreducible: Consciousness, Life, Computers, and Human Nature</h3>
+        <p>2024 Faggin Federico</p>
+      </div>
+      
+
+      <!-- Add more projects here -->
+    </section>
+  </main>
+
+  <footer>
+  <p>Contact: <a href="https://github.com/cyndinz" target="_blank" style="color: #fff; text-decoration: none;">Cyndi GitHub</a></p>
+  </footer>
+
+  <div class="image-container">
+    <img src="rick-and-morty.png" alt="Rick and Morty">
   </div>
 
-  <script>
-    function goBack() {
-      window.history.back();
-    }
-  </script>
+  <!-- Return to Top Button -->
+  <button id="returnToTop" onclick="scrollToTop()">⬆ Return to Top</button>
+
+  <!-- Include JavaScript -->
+  <script src="script.js"></script>
+
+
 </body>
 </html>
