@@ -26,7 +26,6 @@ header p {
   color: #666;
 }
 
-/* Navigation Bar */
 nav {
   background: #555;
   padding: 10px 0;
@@ -143,8 +142,8 @@ footer a {
 
 #floatingNotesContainer {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 70px;
+  right: 70px;
   width: 250px;
   display: flex;
   flex-direction: column;
@@ -153,7 +152,7 @@ footer a {
 }
 
 .floating-note {
-  background: #fff8dc;
+  background-color: rgba(249, 249, 249, 0.7);
   padding: 10px;
   border-radius: 5px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
