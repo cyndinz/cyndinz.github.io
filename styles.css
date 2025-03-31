@@ -148,7 +148,6 @@ footer a {
   flex-direction: column;
   gap: 10px;
   z-index: 1000;
-  background: rgba(249, 249, 249, 0.7);
   border-radius: 10px;
 }
 
