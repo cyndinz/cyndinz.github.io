@@ -31,7 +31,7 @@ function addMsgEntry() {
     // Remove memo after a few seconds
     setTimeout(() => {
       memo.remove();
-    }, 5000);
+    }, 7000);
     
     document.getElementById("msgEntry").value = "";
   }
