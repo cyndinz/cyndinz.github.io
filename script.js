@@ -17,7 +17,7 @@ function addMsgEntry() {
   if (entryText.trim() !== "") {
     const listItem = document.createElement("li");
     listItem.textContent = entryText;
-    document.getElementById("diaryList").appendChild(listItem);
+    document.getElementById("msgEntryList").appendChild(listItem);
     document.getElementById("msgEntry").value = "";
   }
 }
