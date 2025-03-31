@@ -143,12 +143,15 @@ footer a {
 #floatingNotesContainer {
   position: fixed;
   top: 70px;
-  right: 100px;
+  right: 140px;
   width: 250px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   z-index: 1000;
+  background: rgba(249, 249, 249, 0.7);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .floating-note {
