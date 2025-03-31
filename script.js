@@ -11,3 +11,13 @@ window.onscroll = function() {
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+function addMsgEntry() {
+  const entryText = document.getElementById("").value;
+  if (entryText.trim() !== "") {
+    const listItem = document.createElement("li");
+    listItem.textContent = entryText;
+    document.getElementById("diaryList").appendChild(listItem);
+    document.getElementById("msgEntry").value = "";
+  }
+}
