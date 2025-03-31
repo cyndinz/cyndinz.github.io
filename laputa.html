@@ -26,8 +26,8 @@ e<!DOCTYPE html>
     <section class="notekeeper">
       <h2>Send message to the nearest black hole</h2>
       <textarea id="msgEntry" placeholder="Write your message here >>>o<<<"></textarea>
-      <button onclick="addEntry()">Send</button>
-      <ul id="diaryList"></ul>
+      <button onclick="addMsgEntry()">Send</button>
+      <ul id="msgEntryList"></ul>
     </section>
   </main>
 
@@ -44,18 +44,6 @@ e<!DOCTYPE html>
 
   <!-- Include JavaScript -->
   <script src="script.js"></script>
-  <script>
-    function addEntry() {
-      const entryText = document.getElementById("").value;
-      if (entryText.trim() !== "") {
-        const listItem = document.createElement("li");
-        listItem.textContent = entryText;
-        document.getElementById("diaryList").appendChild(listItem);
-        document.getElementById("msgEntry").value = "";
-      }
-    }
-  </script>
-
 
 </body>
 </html>
