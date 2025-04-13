@@ -1,4 +1,4 @@
-// Show the button when scrolled down 100px
+// Show the "return to top" button after scrolling down
 window.onscroll = function () {
   const button = document.getElementById("returnToTop");
   if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
@@ -12,22 +12,19 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+// Add message to list and floating note
 function addMsgEntry() {
   const entryText = document.getElementById("msgEntry").value;
   if (entryText.trim() !== "") {
-    // Add to list
     const listItem = document.createElement("li");
     listItem.textContent = entryText;
     document.getElementById("msgEntryList").appendChild(listItem);
 
-    // Create floating memo
     const memo = document.createElement("div");
     memo.classList.add("floating-note");
     memo.textContent = entryText;
-
     document.getElementById("floatingNotesContainer").appendChild(memo);
 
-    // Remove memo after a few seconds
     setTimeout(() => {
       memo.remove();
     }, 7000);
@@ -36,42 +33,38 @@ function addMsgEntry() {
   }
 }
 
-// Filter and search
-const plantFilter = document.getElementById('plantFilter');
-const plantSearch = document.getElementById('plantSearch');
-const allPlants = document.querySelectorAll('.plant');
+// Filter and search logic
+const plantFilter = document.getElementById("plantFilter");
+const plantSearch = document.getElementById("plantSearch");
+const allPlants = document.querySelectorAll(".project");
 
 function updateVisibility() {
-  const filterValue = plantFilter ? plantFilter.value : 'all';
-  const searchValue = plantSearch ? plantSearch.value.toLowerCase() : '';
+  const filterValue = plantFilter ? plantFilter.value.toLowerCase() : "all";
+  const searchValue = plantSearch ? plantSearch.value.toLowerCase() : "";
 
   let anyVisible = false;
 
-  allPlants.forEach(plant => {
-    const matchesFilter = filterValue === 'all' || plant.classList.contains(filterValue);
-    const textContent = plant.textContent.toLowerCase();
-    const matchesSearch = textContent.includes(searchValue);
+  allPlants.forEach((plant) => {
+    const plantText = plant.textContent.toLowerCase();
+    const matchesSearch = plantText.includes(searchValue);
+    const matchesFilter =
+      filterValue === "all" || plantText.includes(filterValue);
 
-    const shouldShow = matchesFilter && matchesSearch;
-    plant.style.display = shouldShow ? 'flex' : 'none';
+    const shouldShow = matchesSearch && matchesFilter;
+    plant.style.display = shouldShow ? "block" : "none";
 
     if (shouldShow) {
       anyVisible = true;
     }
   });
 
-  // Scroll to plant section after filtering/searching
+  // Scroll to plant section if results are visible
   const section = document.getElementById("plantSection");
-  if (section && anyVisible) {
+  if (anyVisible && section) {
     section.scrollIntoView({ behavior: "smooth" });
   }
 }
 
 // Attach listeners
-if (plantFilter) {
-  plantFilter.addEventListener('change', updateVisibility);
-}
-
-if (plantSearch) {
-  plantSearch.addEventListener('input', updateVisibility);
-}
+if (plantFilter) plantFilter.addEventListener("change", updateVisibility);
+if (plantSearch) plantSearch.addEventListener("input", updateVisibility);
