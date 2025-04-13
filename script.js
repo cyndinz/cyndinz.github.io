@@ -36,7 +36,7 @@ function addMsgEntry() {
   }
 }
 
-// Unified plant filter and search logic
+// Filter and search
 const plantFilter = document.getElementById('plantFilter');
 const plantSearch = document.getElementById('plantSearch');
 const allPlants = document.querySelectorAll('.plant');
@@ -45,18 +45,33 @@ function updateVisibility() {
   const filterValue = plantFilter ? plantFilter.value : 'all';
   const searchValue = plantSearch ? plantSearch.value.toLowerCase() : '';
 
+  let anyVisible = false;
+
   allPlants.forEach(plant => {
     const matchesFilter = filterValue === 'all' || plant.classList.contains(filterValue);
     const textContent = plant.textContent.toLowerCase();
     const matchesSearch = textContent.includes(searchValue);
 
-    plant.style.display = (matchesFilter && matchesSearch) ? 'flex' : 'none';
+    const shouldShow = matchesFilter && matchesSearch;
+    plant.style.display = shouldShow ? 'flex' : 'none';
+
+    if (shouldShow) {
+      anyVisible = true;
+    }
   });
+
+  // Scroll to plant section after filtering/searching
+  const section = document.getElementById("plantSection");
+  if (section && anyVisible) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
 }
 
+// Attach listeners
 if (plantFilter) {
   plantFilter.addEventListener('change', updateVisibility);
 }
+
 if (plantSearch) {
   plantSearch.addEventListener('input', updateVisibility);
 }
