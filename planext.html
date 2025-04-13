@@ -26,22 +26,25 @@
   
   <main>
   <section class="planext">
-
-    <!-- Filter Dropdown -->
-    <div style="margin: 20px 0;">
-      <label for="plantFilter" style="color: #fff; font-size: 1em;">Filter by Plant:</label>
-      <select id="plantFilter" style="padding: 5px; font-family: 'Comic Neue', cursive; margin-left: 10px;">
-        <option value="all">Show All</option>
-        <option value="zebrina">Calathea Zebrina</option>
-        <option value="network">Calathea Network</option>
-        <option value="stingray">Alocasia Stingray</option>
-      </select>
-    </div>
-
-    <!-- Search Bar -->
-    <div style="margin: 10px 0;">
-      <label for="plantSearch" style="color: #fff; font-size: 1em;">Search:</label>
-      <input type="text" id="plantSearch" placeholder="Search by name or keyword..." style="padding: 5px; width: 250px; font-family: 'Comic Neue', cursive; margin-left: 10px;">
+    
+    <!-- Filter + Search Row -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0; flex-wrap: wrap; gap: 10px;">
+      <!-- Filter Dropdown -->
+      <div>
+        <label for="plantFilter" style="color: #fff; font-size: 1em;">Filter:</label>
+        <select id="plantFilter" style="padding: 5px; font-family: 'Comic Neue', cursive; margin-left: 10px;">
+          <option value="all">Show All</option>
+          <option value="zebrina">Calathea Zebrina</option>
+          <option value="network">Calathea Network</option>
+          <option value="stingray">Alocasia Stingray</option>
+        </select>
+      </div>
+    
+      <!-- Search Bar -->
+      <div>
+        <label for="plantSearch" style="color: #fff; font-size: 1em;">Search:</label>
+        <input type="text" id="plantSearch" placeholder="Search by name or keyword..." style="padding: 5px; width: 250px; font-family: 'Comic Neue', cursive; margin-left: 10px;">
+      </div>
     </div>
 
     <section id="plantSection">
