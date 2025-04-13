@@ -8,6 +8,20 @@ window.onscroll = function() {
   }
 };
 
+
+document.getElementById('plantFilter').addEventListener('change', function () {
+    const value = this.value;
+    const allPlants = document.querySelectorAll('.plant');
+
+    allPlants.forEach(plant => {
+      if (value === 'all' || plant.classList.contains(value)) {
+        plant.style.display = 'flex';
+      } else {
+        plant.style.display = 'none';
+      }
+    });
+  });
+
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
