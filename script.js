@@ -9,19 +9,6 @@ window.onscroll = function() {
 };
 
 
-document.getElementById('plantFilter').addEventListener('change', function () {
-    const value = this.value;
-    const allPlants = document.querySelectorAll('.plant');
-
-    allPlants.forEach(plant => {
-      if (value === 'all' || plant.classList.contains(value)) {
-        plant.style.display = 'flex';
-      } else {
-        plant.style.display = 'none';
-      }
-    });
-  });
-
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -50,3 +37,36 @@ function addMsgEntry() {
     document.getElementById("msgEntry").value = "";
   }
 }
+
+document.getElementById('plantFilter').addEventListener('change', function () {
+    const value = this.value;
+    const allPlants = document.querySelectorAll('.plant');
+
+    allPlants.forEach(plant => {
+      if (value === 'all' || plant.classList.contains(value)) {
+        plant.style.display = 'flex';
+      } else {
+        plant.style.display = 'none';
+      }
+    });
+  });
+
+const plantFilter = document.getElementById('plantFilter');
+  const plantSearch = document.getElementById('plantSearch');
+  const allPlants = document.querySelectorAll('.plant');
+
+  function updateVisibility() {
+    const filterValue = plantFilter.value;
+    const searchValue = plantSearch.value.toLowerCase();
+
+    allPlants.forEach(plant => {
+      const matchesFilter = filterValue === 'all' || plant.classList.contains(filterValue);
+      const textContent = plant.textContent.toLowerCase();
+      const matchesSearch = textContent.includes(searchValue);
+
+      plant.style.display = (matchesFilter && matchesSearch) ? 'flex' : 'none';
+    });
+  }
+
+  plantFilter.addEventListener('change', updateVisibility);
+  plantSearch.addEventListener('input', updateVisibility);
