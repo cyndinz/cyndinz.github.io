@@ -1,72 +1,640 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
   <title>Gaafree</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/vendor.css">
+  <link rel="stylesheet" type="text/css" href="fonts/icomoon.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- script
+    ================================================== -->
+  <script src="js/modernizr.js"></script>
 </head>
-<body>
-  <header>
-    <h1>Cyndi</h1>
-    <p>CodeWhizmo</p>
+
+<body class="bg-dark">
+
+  <header id="header">
+    <nav class="navbar navbar-expand-lg padding-small px-lg-4">
+      <div class="container-fluid ">
+
+        <div class="main-logo">
+          <a href="index.html">
+            <img src="images/main-logo.png" alt="logo">
+          </a>
+        </div>
+
+        <button class="navbar-toggler mb-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <iconify-icon icon="system-uicons:menu-hamburger" class="hamburger-menu"></iconify-icon>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body ">
+            <div class="main-menu text-center d-lg-flex align-items-center">
+              <ul class="menu-list list-unstyled d-lg-flex m-0">
+                <li class="menu-item">
+                  <a href="index.html" class="item-anchor active" data-effect="Home">Home</a>
+                </li>
+                <li class="menu-item">
+                  <a href="market.html" class="item-anchor" data-effect="Blogs">Market</a>
+                </li>
+                <li class="menu-item">
+                  <a href="planetarians.html" class="item-anchor" data-effect="Shop">Planetarians</a>
+                </li>
+                <li class="menu-item">
+                  <a href="exoplanets.html" class="item-anchor" data-effect="Blogs">Exoplanets</a>
+                </li>
+                
+                <li class="menu-item ">
+                  <a href="error.html"
+                    class="item-anchor" target="_blank"> <b>CYNDI</b> </a>
+                </li>
+              </ul>
+            </div>
+            <div class="btn-wrap d-flex my-4 my-lg-0 ">
+              <a href="login.html" class="btn btn-linear btn-medium">Log in</a>
+              <a href="signin.html" class="btn btn-outline-linear btn-medium m-0">Sign up</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </nav>
   </header>
+  <div id="billboard" class="padding-large overflow-hidden">
+    <div class="container">
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="col-md-7 col-sm-8">
+          <div class="banner-content content-light m-0 mt-5 mt-md-0">
+            <h1 class="banner-title m-0">UNIVERSE IS CALLING.</h1>
+            <p class="grey">No edge, no end, no final line, a silent stretch beyond the time.
+              The stars dissolve, yet still they glow, in endless paths we’ll never know.
+              A breath, a pulse, a ceaseless stream, forevermore, a boundless dream.
+              For all we are and all we'll be, is but a wave upon the infinity.</p>
+            <div class="btn-wrap d-flex flex-wrap">
+              <a href="#" class="btn btn-linear btn-medium mt-3">Get Started</a>
+              <a href="#" class="btn btn-outline-linear btn-medium mt-3">Create Gaa</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 col-sm-8">
+          <div class="image-holder">
+            <img src="images/banner-image.png" alt="banner" class="banner-image img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="association-with" class="padding-large pt-5 pattern-blur">
+    <div class="pattern-overlay left-side-pattern">
+      <img src="images/pattern-blur-left.png">
+    </div>
+    <div class="container">
+      <div class="row justify-content-between">
+        <img src="images/association-brand4.png" alt="brand" class="col-md-2 img-fluid">
+        <img src="images/association-brand3.png" alt="brand" class="col-md-2 img-fluid">
+        <img src="images/association-brand5.png" alt="brand" class="col-md-2 img-fluid">
+        <img src="images/association-brand3.png" alt="brand" class="col-md-2 img-fluid">
+        <img src="images/association-brand4.png" alt="brand" class="col-md-2 img-fluid">
+      </div>
+    </div>
+  </section>
+  <section id="product-card" class="">
+    <div class="container">
+      <div class="row">
+        <div class="section-header text-center">
+          <h2 class="section-title light">Build Your GAAs </h2>
+        </div>
+        <div class="swiper product-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="image-holder">
+                  <img src="images/exoplanet-item1.jpg" alt="exoplanet" class="rounded-shape">
+                </div>
+                <div class="product-detail bg-light">
+                  <div class="card-header d-flex flex-wrap justify-content-between">
+                    <h3 class="card-title">Lighting Axe</h3>
+                    <span class="currency">0.36 FREE</span>
+                  </div>
+                  <div class="clients-detail">
+                    <img src="images/clients-item1.jpg" alt="clients" class="circle-shape">
+                    <span class="clients-name">Cinderella</span>
+                  </div>
+                  <div class="btn-card">
+                    <a href="#" class="btn btn-linear btn-full btn-rounded btn-medium">Place a Bid</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="image-holder">
+                  <img src="images/exoplanet-item5.jpg" alt="exoplanet" class="rounded-shape">
+                </div>
+                <div class="product-detail bg-light">
+                  <div class="card-header d-flex flex-wrap justify-content-between">
+                    <h3 class="card-title">Dieffenbachia Reflector</h3>
+                    <span class="currency">0.29 FREE</span>
+                  </div>
+                  <div class="clients-detail">
+                    <img src="images/clients-item2.jpg" alt="clients" class="circle-shape">
+                    <span class="clients-name">Ke Chin</span>
+                  </div>
+                  <div class="btn-card">
+                    <a href="#" class="btn btn-linear btn-full btn-rounded btn-medium">Place a Bid</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="image-holder">
+                  <img src="images/exoplanet-item1.jpg" alt="exoplanet" class="rounded-shape">
+                </div>
+                <div class="product-detail bg-light">
+                  <div class="card-header d-flex flex-wrap justify-content-between">
+                    <h3 class="card-title">Lighting Axe</h3>
+                    <span class="currency">0.22 FREE</span>
+                  </div>
+                  <div class="clients-detail">
+                    <img src="images/clients-item3.jpg" alt="clients" class="circle-shape">
+                    <span class="clients-name">Cheese Kate</span>
+                  </div>
+                  <div class="btn-card">
+                    <a href="#" class="btn btn-linear btn-full btn-rounded btn-medium">Place a Bid</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="image-holder">
+                  <img src="images/exoplanet-item5.jpg" alt="exoplanet" class="rounded-shape">
+                </div>
+                <div class="product-detail bg-light">
+                  <div class="card-header d-flex flex-wrap justify-content-between">
+                    <h3 class="card-title">Dieffenbachia Reflector</h3>
+                    <span class="currency">0.29 FREE</span>
+                  </div>
+                  <div class="clients-detail">
+                    <img src="images/clients-item2.jpg" alt="clients" class="circle-shape">
+                    <span class="clients-name">Ke Chin</span>
+                  </div>
+                  <div class="btn-card">
+                    <a href="#" class="btn btn-linear btn-full btn-rounded btn-medium">Place a Bid</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="image-holder">
+                  <img src="images/exoplanet-item1.jpg" alt="exoplanet" class="rounded-shape">
+                </div>
+                <div class="product-detail bg-light">
+                  <div class="card-header d-flex flex-wrap justify-content-between">
+                    <h3 class="card-title">Lighting Axe</h3>
+                    <span class="currency">0.22 FREE</span>
+                  </div>
+                  <div class="clients-detail">
+                    <img src="images/clients-item1.jpg" alt="clients" class="circle-shape">
+                    <span class="clients-name">Cheese Kate</span>
+                  </div>
+                  <div class="btn-card">
+                    <a href="#" class="btn btn-linear btn-full btn-rounded btn-medium">Place a Bid</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-item">
+                <div class="image-holder">
+                  <img src="images/exoplanet-item1.jpg" alt="exoplanet" class="rounded-shape">
+                </div>
+                <div class="product-detail bg-light">
+                  <div class="card-header d-flex flex-wrap justify-content-between">
+                    <h3 class="card-title">Lighting Axe</h3>
+                    <span class="currency">0.22 FREE</span>
+                  </div>
+                  <div class="clients-detail">
+                    <img src="images/clients-item3.jpg" alt="clients" class="circle-shape">
+                    <span class="clients-name">Cheese Kate</span>
+                  </div>
+                  <div class="btn-card">
+                    <a href="#" class="btn btn-linear btn-full btn-rounded btn-medium">Place a Bid</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <section id="top-creators" class="padding-large">
+    <div class="container">
+      <div class="row">
+        <div class="section-header align-center">
+          <h2 class="section-title light">Top Planetarians </h2>
+          <p>As stars dancing, bright and free, a waltz of fire in endless sea.
+            They spin and shimmer, burn and gleam, a silent song, a golden dream.</p>
+          <a href="#" class="btn btn-linear btn-medium mt-4">View All Planetarians</a>
 
-   <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a href="#">Gaa</a></li>
-      <li><a href="nobody.html">Nobody</a></li>
-      <li><a href="read.html">Read</a></li>
-      <li><a href="exoplanet.html">Exoplanet</a></li>
-      <li><a href="planext.html">Planext</a></li>
-    </ul>
-  </nav>
+        </div>
+        <div class="product-content overflow-hidden">
+          <div class="row d-flex flex-wrap">
+            <div class="col-md-3 col-sm-6">
+              <div class="product-item bg-blue-trans border-rounded">
+                <div class="product-detail text-center">
+                  <div class="clients-detail">
+                    <img src="images/clients-item-lg1.jpg" alt="clients" class="circle-shape">
+                  </div>
+                  <h3 class="block-title">Cinderella</h3>
+                  <div class="btn-card">
+                    <a href="#" class="btn btn-linear btn-rounded btn-medium">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="product-item bg-blue-trans border-rounded">
+                <div class="product-detail text-center">
+                  <div class="clients-detail">
+                    <img src="images/clients-item-lg2.jpg" alt="clients" class="circle-shape">
+                  </div>
+                  <h3 class="block-title">Ke Chin</h3>
+                  <div class="btn-card">
+                    <a href="#" class="btn btn-linear btn-rounded btn-medium">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="product-item bg-blue-trans border-rounded">
+                <div class="product-detail text-center">
+                  <div class="clients-detail">
+                    <img src="images/clients-item-lg3.jpg" alt="clients" class="circle-shape">
+                  </div>
+                  <h3 class="block-title">Cheese Kate</h3>
+                  <div class="btn-card">
+                    <a href="#" class="btn btn-linear btn-rounded btn-medium">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="product-item bg-blue-trans border-rounded">
+                <div class="product-detail text-center">
+                  <div class="clients-detail">
+                    <img src="images/clients-item-lg2.jpg" alt="clients" class="circle-shape">
+                  </div>
+                  <h3 class="block-title">Mamamia</h3>
+                  <div class="btn-card">
+                    <a href="#" class="btn btn-linear btn-rounded btn-medium">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="subscribe" class=" pattern-circle">
+    <div class="pattern-overlay">
+      <img src="images/pattern-overlay.png" alt="pattern-overlay">
+    </div>
+    <div class="container">
+      <div class="row d-flex flex-wrap justify-content-center">
+        <div class="col-md-6">
+          <div class="image-holder">
+            <img src="images/single-image.jpg" alt="single image" class="banner-image">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="subscribe-content">
+            <div class="subscribe-header">
+              <h3 class="subscribe-title light">Subscribe And get Latest news update about Gaafree.</h3>
+              <p>The planets turn in measured flight, bound by forces, locked in light.
+                Yet in their glow, a truth we find - we're but a spark in space and time.</p>
+            </div>
+            <form id="form" class="d-flex justify-content-between bg-blue-trans rounded-3">
+              <input type="text" name="email" placeholder="Write your email here"
+                class="btn-rounded w-100 content-dim-light align-self-center bg-transparent border-0">
+              <button class="btn btn-linear btn-medium rounded-0">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="nft-exoplanet" class="padding-large">
+    <div class="container">
+      <div class="row overflow-hidden">
+        <div class="section-header align-center">
+          <h2 class="section-title light">Exoplanets</h2>
+          <p>Light years away, gaa is the journey, not just the place. New skies to paint, new dreams to chase. We'll find our place, in endless space.</p>
+        </div>
+        <div class="product-content">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <div class="product-item bg-blue-trans border-rounded-pill">
+                <div class="product-detail text-center">
+                  <div class="clients-detail">
+                    <img src="images/blog3.jpg" alt="clients" class="circle-shape">
+                  </div>
+                  <h3 class="block-title">Broken Exoplanet</h3>
+                  <div class="btn-card">
+                    <a href="#" class="view-btn">View Exoplanet</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="product-item bg-blue-trans border-rounded-pill">
+                <div class="product-detail text-center">
+                  <div class="clients-detail">
+                    <img src="images/blog3.jpg" alt="clients" class="circle-shape">
+                  </div>
+                  <h3 class="block-title">Broken Exoplanet</h3>
+                  <div class="btn-card">
+                    <a href="#" class="view-btn">View Exoplanet</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="product-item bg-blue-trans border-rounded-pill">
+                <div class="product-detail text-center">
+                  <div class="clients-detail">
+                    <img src="images/blog3.jpg" alt="clients" class="circle-shape">
+                  </div>
+                  <h3 class="block-title">Broken Exoplanet</h3>
+                  <div class="btn-card">
+                    <a href="#" class="view-btn">View Exoplanet</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="product-item bg-blue-trans border-rounded-pill">
+                <div class="product-detail text-center">
+                  <div class="clients-detail">
+                    <img src="images/blog3.jpg" alt="clients" class="circle-shape">
+                  </div>
+                  <h3 class="block-title">Broken Exoplanet</h3>
+                  <div class="btn-card">
+                    <a href="#" class="view-btn">View Exoplanet</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="blog" class="padding-large">
+    <div class="container">
+      <div class="row overflow-hidden">
+        <div class="section-header d-md-flex justify-content-between ">
+          <h2 class="section-title light">Gaafree Blog</h2>
+          <div>
+            <a href="#" class="btn btn-linear btn-medium">Read Blogs</a>
+          </div>
+        </div>
+        <div class="product-content">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <div class="product-item bg-blue-trans p-3 rounded-1 mb-3 ">
+                <div class="product-detail">
+                  <div class="clients-detail">
+                    <a href="blog-single.html"> <img src="images/gaa-item1.jpg" alt="clients"> </a>
+                  </div>
+                  <div class="btn-card">
+                    <a href="blog-single.html" class="view-btn">Art</a>
+                  </div>
+                  <a href="blog-single.html">
+                    <h3 class="block-title">Best GAAs arts from best artists </h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="product-item bg-blue-trans p-3 rounded-1 mb-3 ">
+                <div class="product-detail">
+                  <div class="clients-detail">
+                    <a href="blog-single.html"> <img src="images/gaa-item2.jpg" alt="clients"> </a>
+                  </div>
+                  <div class="btn-card">
+                    <a href="blog-single.html" class="view-btn">Design</a>
+                  </div>
+                  <a href="blog-single.html">
+                    <h3 class="block-title">Best GAAs arts from best artists </h3>
+                  </a>
 
-  <main>
-    <section class="gaafree">
-      <h2>Gaafree</h2>
-      <p>Gaafree has no concrete definition - at least, not yet. It’s something that has lingered in my mind for quite some time, a concept shaped by the enchantment of the magical universe and the brilliance of science. I truly believe there should be a portal where we can come together to explore and connect over all these incredible ideas.</p>
-    </section>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="product-item bg-blue-trans p-3 rounded-1 mb-3 ">
+                <div class="product-detail">
+                  <div class="clients-detail">
+                    <a href="blog-single.html"> <img src="images/gaa-item3.jpg" alt="clients"> </a>
+                  </div>
+                  <div class="btn-card">
+                    <a href="blog-single.html" class="view-btn">GAAs</a>
+                  </div>
+                  <a href="blog-single.html">
+                    <h3 class="block-title">Best GAAs arts from best artists </h3>
+                  </a>
 
-    <section class="gaafree">
-      <h2>Unitarity</h2>
-      <p>The principle of unitarity says that information about a system’s initial state is preserved in its final state. Even if it transforms wildl via entropy or black holes, it's still encoded in the system somehow.
-        Stephen Hawking initially proposed that Hawking radiation doesn't carry information thus information could be lost in black holes.
-        Later theory holographic principle invented by Gerard 't Hooft, developed and formalized by Leonard Susskind, and mathematically backed by Juan Maldacena suggests that information isn't lost but somehow smeared on the event horizon or encoded in the Hawking radiation.
-        Hence, my question: information can be radiated out? Recoverable? Reversible?</p>
-    </section>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="product-item bg-blue-trans p-3 rounded-1 mb-3 ">
+                <div class="product-detail">
+                  <div class="clients-detail">
+                    <a href="blog-single.html"> <img src="images/gaa-item4.jpg" alt="clients"> </a>
+                  </div>
+                  <div class="btn-card">
+                    <a href="blog-single.html" class="view-btn">Arts</a>
+                  </div>
+                  <a href="blog-single.html">
+                    <h3 class="block-title">Best GAAs arts from best artists </h3>
+                  </a>
 
-    <section class="gaafree">
-      <h2>Photosynthesis</h2>
-      <p>Mother Nature uses quantum mechanics at room temperature without a problem. The miracle of photosynthesis is one of the most important processes on earth that performs in a quantum process.</p>
-    </section>
-    
-    <section class="gaafree">
-      <h2>Waltz</h2>
-      <p>The stars are dancing, bright and free, a waltz of fire in endless sea. <br> They spin and shimmer, burn and gleam, a silent song, a golden dream. <br> The planets turn in measured flight, bound by forces, locked in light. <br> Yet in their glow, a truth we find - we're but a spark in space and time.</p>
-    </section>
-
-    <section class="gaafree">
-      <h2>Infinity</h2>
-      <p>No edge, no end, no final line, a silent stretch beyond the time. <br> The stars dissolve, yet still they glow, in endless paths we’ll never know. <br> A breath, a pulse, a ceaseless stream, forevermore, a boundless dream. <br> For all we are and all we'll be, is but a wave upon the infinity.</p>
-    </section>
-  </main>
-
-  <footer>
-  <p>Contact: <a href="https://github.com/cyndinz" target="_blank" style="color: #fff; text-decoration: none;">Cyndi GitHub</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="footer" class="padding-large pattern-blur">
+    <div class="pattern-overlay pattern-blur-footer right-side-pattern">
+      <img src="images/footer-pattern.png">
+    </div>
+    <div class="container">
+      <div class="row d-flex flex-wrap justify-content-between">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-item item-001">
+            <img src="images/main-logo.png" alt="logo">
+            <p>Born from the fusion of the universe’s magic and scientific brilliance. </p>
+            <div class="social-media">
+              <ul class="d-flex list-unstyled">
+                <li class="bg-blue-trans border-rounded-circle">
+                  <a href="#">
+                    <i class="icon icon-facebook"></i>
+                  </a>
+                </li>
+                <li class="bg-blue-trans border-rounded-circle">
+                  <a href="#">
+                    <i class="icon icon-twitter"></i>
+                  </a>
+                </li>
+                <li class="bg-blue-trans border-rounded-circle">
+                  <a href="#">
+                    <i class="icon icon-instagram"></i>
+                  </a>
+                </li>
+                <li class="bg-blue-trans border-rounded-circle">
+                  <a href="#">
+                    <i class="icon icon-youtube"></i>
+                  </a>
+                </li>
+                <li class="bg-blue-trans border-rounded-circle">
+                  <a href="#">
+                    <i class="icon icon-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <div class="footer-item item-002 content-light">
+            <h4>Market</h4>
+            <ul class="footer-menu list-unstyled">
+              <li>
+                <a href="#">GAAs</a>
+              </li>
+              <li>
+                <a href="#">Art</a>
+              </li>
+              <li>
+                <a href="#">Gaallery</a>
+              </li>
+              <li>
+                <a href="#">Freebies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <div class="footer-item item-003 content-light">
+            <h4>Info</h4>
+            <ul class="footer-menu list-unstyled">
+              <li>
+                <a href="#">Activity</a>
+              </li>
+              <li>
+                <a href="#">Stats</a>
+              </li>
+              <li>
+                <a href="#">Rankings</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <div class="footer-item item-004 content-light">
+            <h4>Company</h4>
+            <ul class="footer-menu list-unstyled">
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Support</a>
+              </li>
+              <li>
+                <a href="#">Features</a>
+              </li>
+              <li>
+                <a href="#">Top Planetarians</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <div class="footer-item item-005 content-light">
+            <h4>Resources</h4>
+            <ul class="footer-menu list-unstyled">
+              <li>
+                <a href="#">Info</a>
+              </li>
+              <li>
+                <a href="#">Affiliates</a>
+              </li>
+              <li>
+                <a href="#">Associated</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
-
-  <div class="image-container">
-    <img src="image/rick-and-morty.png" alt="Rick and Morty">
+  <hr>
+  <div id="footer-bottom">
+    <div class="container">
+      <div class="row text-center">
+        <p>© 2025 Copyright <a href="https://gaafree.com/" class="light">Gaafree</a>. All rights
+          reserved </p>
+      </div>
+    </div>
   </div>
 
-  <!-- Return to Top Button -->
-  <button id="returnToTop" onclick="scrollToTop()">⬆ Return to Top</button>
 
-  <!-- Include JavaScript -->
-  <script src="script.js"></script>
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/plugins.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
+
 </html>
