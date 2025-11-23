@@ -1574,6 +1574,9 @@ blockquote cite {
 ------------------------------------------*/
 img.circle-shape {
   border-radius: 50%;
+  object-position: center;
+  object-fit: cover;    /* crops the rectangular image nicely */
+  overflow: hidden;
 }
 
 img.rounded-shape {
