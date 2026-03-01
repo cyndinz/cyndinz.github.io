@@ -1,9 +1,7 @@
 // GAA Marketplace - Frontend API Client
 // This file handles all communication between frontend and Vercel backend
 
-// TODO: Replace with your actual Vercel deployment URL after deploying to Vercel
 const API_URL = 'https://gaafree.vercel.app/api';
-
 
 /**
  * Fetch all GAA items
