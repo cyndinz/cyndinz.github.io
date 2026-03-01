@@ -2,12 +2,11 @@
 // URL: /api/users
 
 import { createClient } from '@supabase/supabase-js';
+import { setCorsHeaders } from './_cors.js';
 
 export default async function handler(req, res) {
   // CORS headers
-  res.setHeader('Access-Control-Allow-Origin', 'https://gaafree.com');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, PUT, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  setCorsHeaders(req, res);
 
   // Handle preflight
   if (req.method === 'OPTIONS') {
